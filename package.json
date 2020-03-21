@@ -19,6 +19,7 @@
     "@opam/dune": "*",
     "@reason-native/console": "*",
     "@reason-native/pastel": "*",
+    "graphql_ppx": "^0.2.8",
     "ocaml": "~4.8.1000",
     "revery": "github:revery-ui/revery#1196f1b"
   },

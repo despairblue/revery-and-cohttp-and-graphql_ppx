@@ -48,9 +48,9 @@ The useful opam packages available that extend this library are:
 """
 url {
   src:
-    "https://github.com/mirage/ocaml-conduit/releases/download/v2.0.1/conduit-v2.0.1.tbz"
+    "https://github.com/mirage/ocaml-conduit/releases/download/v2.0.2/conduit-v2.0.2.tbz"
   checksum: [
-    "sha256=faf9c1a74bb9f7e0c97637a96968c5198a9344b1dfccbbc2d124d74ac3bedfbb"
-    "sha512=af30cb72ca65e619eb3f38ab3633c1f0ab28dbd7eedd10bcb80f449db9c9b7c433b8553adcb05ac1590ece1797e55bbe5e915255b1ad2fa2dff461a2bfc488aa"
+    "sha256=2510372ed98c7e0446d788317a435f752d900d72df0fbe4c353f5e5bfb9d1dd2"
+    "sha512=3e25b754c84dd603acbb4d810b532c3cfb273808b9bf9a17890e40b79e65529d17cd66d613a447cb2a7f51f0522f17d46ab0ade5c79cb2a3c8565efd484238ae"
   ]
 }
