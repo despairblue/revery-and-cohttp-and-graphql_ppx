@@ -15,6 +15,7 @@
   "dependencies": {
     "@esy-ocaml/reason": ">= 3.4.0 < 3.6.0",
     "@opam/cohttp": "2.4.0",
+    "@opam/cohttp-lwt-unix": "2.5.1",
     "@opam/dune": "*",
     "@reason-native/console": "*",
     "@reason-native/pastel": "*",
