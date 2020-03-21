@@ -1,77 +1,29 @@
-# hello-reason
+Does not build:
 
-[![Build Status](https://dev.azure.com/esy-ocaml/esy-ocaml/_apis/build/status/esy-ocaml.hello-reason?branchName=master)](https://dev.azure.com/esy-ocaml/esy-ocaml/_build/latest?definitionId=1?branchName=master)
+```
+info esy 0.6.2 (using package.json)
+info building graphql_ppx@0.2.8@d41d8cd9
+info building @opam/conduit@opam:2.0.2@2891d9d4
+error: build failed with exit code: 1
+  build log:
+    # esy-build-package: building: @opam/conduit@opam:2.0.2
+    # esy-build-package: pwd: /home/despairblue/.esy/3/b/opam__s__conduit-opam__c__2.0.2-c656eae8
+    # esy-build-package: running: 'dune' 'build' '-p' 'conduit' '-j' '4'
+          ocamlc lib/.conduit.objs/byte/conduit_trie.{cmi,cmti} (exit 2)
+    (cd _build/default && /home/despairblue/.esy/3______________________________________________________________/i/ocaml-4.8.1000-e74c5c0d/bin/ocamlc.opt -w -40 -g -bin-annot -I lib/.conduit.objs/byte -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__astring-opam__c__0.8.3-59e74530/lib/astring -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__domain_name-opam__c__0.3.0-a33029e2/lib/domain-name -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__fmt-opam__c__0.8.8-4e30b15f/lib/fmt -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__ipaddr-opam__c__4.0.0-e8cda547/lib/ipaddr -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__ipaddr_sexp-opam__c__4.0.0-1e4c96fa/lib/ipaddr-sexp -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__macaddr-opam__c__4.0.0-92d58633/lib/macaddr -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__ocamlfind-opam__c__1.8.1-c291620e/lib/bytes -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__ppx__sexp__conv-opam__c__v0.12.0-742d3d8a/lib/ppx_sexp_conv/runtime-lib -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__re-opam__c__1.9.0-2caeaa79/lib/re -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__re-opam__c__1.9.0-2caeaa79/lib/re/posix -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__seq-opam__c__base-e549f174/lib/seq -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__sexplib-opam__c__v0.10.0-4f400d25/lib/sexplib -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__sexplib-opam__c__v0.10.0-4f400d25/lib/sexplib/0 -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__sexplib0-opam__c__v0.12.0-e518701d/lib/sexplib0 -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__stdlib_shims-opam__c__0.1.0-d9880ed6/lib/stdlib-shims -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__stringext-opam__c__1.6.0-26210ac8/lib/stringext -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__uri-opam__c__3.1.0-239ee2bd/lib/uri -no-alias-deps -o lib/.conduit.objs/byte/conduit_trie.cmi -c -intf lib/conduit_trie.pp.mli)
+    File "lib/conduit_trie.mli", line 1:
+    Error: The files /home/despairblue/.esy/3______________________________________________________________/i/opam__s__ppx__sexp__conv-opam__c__v0.12.0-742d3d8a/lib/ppx_sexp_conv/runtime-lib/ppx_sexp_conv_lib.cmi
+           and /home/despairblue/.esy/3______________________________________________________________/i/opam__s__sexplib-opam__c__v0.10.0-4f400d25/lib/sexplib/0/sexplib0.cmi
+           make inconsistent assumptions over interface Sexplib0
+          ocamlc lib/.conduit.objs/byte/conduit.{cmi,cmti} (exit 2)
+    (cd _build/default && /home/despairblue/.esy/3______________________________________________________________/i/ocaml-4.8.1000-e74c5c0d/bin/ocamlc.opt -w -40 -g -bin-annot -I lib/.conduit.objs/byte -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__astring-opam__c__0.8.3-59e74530/lib/astring -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__domain_name-opam__c__0.3.0-a33029e2/lib/domain-name -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__fmt-opam__c__0.8.8-4e30b15f/lib/fmt -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__ipaddr-opam__c__4.0.0-e8cda547/lib/ipaddr -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__ipaddr_sexp-opam__c__4.0.0-1e4c96fa/lib/ipaddr-sexp -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__macaddr-opam__c__4.0.0-92d58633/lib/macaddr -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__ocamlfind-opam__c__1.8.1-c291620e/lib/bytes -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__ppx__sexp__conv-opam__c__v0.12.0-742d3d8a/lib/ppx_sexp_conv/runtime-lib -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__re-opam__c__1.9.0-2caeaa79/lib/re -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__re-opam__c__1.9.0-2caeaa79/lib/re/posix -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__seq-opam__c__base-e549f174/lib/seq -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__sexplib-opam__c__v0.10.0-4f400d25/lib/sexplib -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__sexplib-opam__c__v0.10.0-4f400d25/lib/sexplib/0 -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__sexplib0-opam__c__v0.12.0-e518701d/lib/sexplib0 -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__stdlib_shims-opam__c__0.1.0-d9880ed6/lib/stdlib-shims -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__stringext-opam__c__1.6.0-26210ac8/lib/stringext -I /home/despairblue/.esy/3______________________________________________________________/i/opam__s__uri-opam__c__3.1.0-239ee2bd/lib/uri -no-alias-deps -o lib/.conduit.objs/byte/conduit.cmi -c -intf lib/conduit.pp.mli)
+    File "lib/conduit.mli", line 1:
+    Error: The files /home/despairblue/.esy/3______________________________________________________________/i/opam__s__ppx__sexp__conv-opam__c__v0.12.0-742d3d8a/lib/ppx_sexp_conv/runtime-lib/ppx_sexp_conv_lib.cmi
+           and /home/despairblue/.esy/3______________________________________________________________/i/opam__s__sexplib-opam__c__v0.10.0-4f400d25/lib/sexplib/0/sexplib0.cmi
+           make inconsistent assumptions over interface Sexplib0
+    error: command failed: 'dune' 'build' '-p' 'conduit' '-j' '4' (exited with 1)
+    esy-build-package: exiting with errors above...
 
-A project which demonstrates a Reason workflow with [Esy][].
-
-[Esy]: https://github.com/esy-ocaml/esy
-
-
-## Usage
-
-You need Esy, you can install the beta using [npm](https://npmjs.com):
-
-    % npm install -g esy@latest
-
-> NOTE: Make sure `esy --version` returns at least `0.5.4` for this project to build.
-
-Then run the `esy` command from this project root to install and build dependencies.
-
-    % esy
-
-Now you can run your editor within the environment (which also includes merlin):
-
-    % esy $EDITOR
-    % esy vim
-
-Alternatively you can try [vim-reasonml](https://github.com/jordwalke/vim-reasonml)
-which loads esy project environments automatically.
-
-After you make some changes to source code, you can re-run project's build
-again with the same simple `esy` command.
-
-    % esy
-
-And test compiled executable (runs `scripts.tests` specified in
-`package.json`):
-
-    % esy test
-
-Documentation for the libraries in the project can be generated with:
-
-    % esy doc
-    % esy open '#{self.target_dir}/default/_doc/_html/index.html'
-
-Shell into environment:
-
-    % esy shell
-
-
-## Create Prebuilt Release:
-
-`esy` allows creating prebuilt binary packages for your current platform, with
-no dependencies.
-
-    % esy npm-release
-    % cd _release
-    % npm publish
-
-## Continuous Integration:
-`hello-reason` includes CI configuration for Azure
-[DevOps](https://dev.azure.com) pipelines out of the box.
-
-- Create your Azure DevOps account.
-- Add a new project, and point that new Azure DevOps project to your github
-  repo that includes the CI (`./azure-pipelines.yml` and the `.ci/` directory)
-  from `hello-reason`.
-- Create a new Pipeline within that project.
-  - When asked how to configure the new pipeline, select the option to use
-    existing configuration inside the repo.
-
-The CI is configured to build caches on the `master` branch, and also any
-branch named one of (`global`, `release-*`, `releases-*`). That means that pull
-requests to any branch with those names will be fast, once you have landed at
-least one commit to that branch. The first time you submit a pull request to
-one of those branches, the builds will be slow but then subsequent pull
-requests will be faster once a pull request is merged to it.
-
+  building @opam/conduit@opam:2.0.2
+esy: exiting due to errors above
+```
