@@ -5,27 +5,20 @@
   "license": "MIT",
   "esy": {
     "build": "dune build -p #{self.name}",
-    "buildDev": "refmterr dune build --promote-install-files --root . --only-package #{self.name}",
+    "buildDev":
+      "refmterr dune build --promote-install-files --root . --only-package #{self.name}",
     "NOTE": "Optional release Section. Customizes result of `esy release`",
-    "release": {
-      "bin": [
-        "Hello"
-      ]
-    },
-    "buildEnv": {
-      "ODOC_SYNTAX": "re"
-    }
+    "release": { "bin": [ "Hello" ] },
+    "buildEnv": { "ODOC_SYNTAX": "re" }
   },
-  "scripts": {
-    "test": "esy x Hello",
-    "doc": "esy dune build @doc"
-  },
+  "scripts": { "test": "esy x Hello", "doc": "esy dune build @doc" },
   "dependencies": {
+    "@esy-ocaml/reason": ">= 3.4.0 < 3.6.0",
     "@opam/dune": "*",
     "@reason-native/console": "*",
     "@reason-native/pastel": "*",
-    "@esy-ocaml/reason": ">= 3.4.0 < 3.6.0",
-    "ocaml": "~4.8.1000"
+    "ocaml": "~4.8.1000",
+    "revery": "github:revery-ui/revery#1196f1b"
   },
   "devDependencies": {
     "@opam/merlin": "*",
@@ -33,5 +26,9 @@
     "refmterr": "*",
     "ocaml": "~4.8.1000",
     "@opam/odoc": "*"
+  },
+  "resolutions": {
+    "esy-cmake": "prometheansacrifice/esy-cmake#2a47392def755",
+    "revery": "revery-ui/revery#1196f1b"
   }
 }
